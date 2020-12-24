@@ -17,8 +17,8 @@ A French-English Discord bot written in JS who can play some music, save stats o
 
 # Requis : 
 - Node.JS
-- Un token Discord : https://discordapp.com/developers/applications/ID-de-votre-bot/bots (a replacer dans le fichier `.env` avec DISCORDTOKEN)
-- Un token FortniteTracker : https://tracker.gg/developers/ (à remplacer dans le fichier `.env` avec FTNTOKEN)
+- Un token Discord : https://discordapp.com/developers/applications/ID-de-votre-bot/bots (a replacer dans le fichier `config.js` avec DISCORDTOKEN)
+- Un token FortniteTracker : https://tracker.gg/developers/ (à remplacer dans le fichier `config.js` avec FTNTOKEN)
 - Les modules déjà pré-installés dans le fichier `package.json`.
 
 # Utilisation :
