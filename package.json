@@ -1,0 +1,34 @@
+{
+  "name": "horizon-djs",
+  "version": "1.0.0",
+  "description": "A French-English Discord bot written in JS who can play some music, save stats of a server, do fun things, etc..",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "apextab-api": "^1.0.5",
+    "axios": "^0.19.2",
+    "cheerio": "^1.0.0-rc.3",
+    "common-tags": "^1.8.0",
+    "fortnite": "^4.3.2",
+    "jimp": "0.16.0",
+    "mongoose": "^5.9.14",
+    "ms": "^2.1.2",
+    "node-fetch": "^2.6.1",
+    "random-puppy": "^1.1.0",
+    "request": "2.88.2",
+    "@discordjs/opus": "^0.3.3",
+    "array-move": "^3.0.1",
+    "discord.js": "^12.5.1",
+    "erit-ytdl": "^0.1.2",
+    "ffmpeg-static": "^4.2.3",
+    "lyrics-finder": "^21.0.5",
+    "opusscript": "^0.0.7",
+    "simple-youtube-api": "^5.1.1",
+    "soundcloud-downloader": "^0.2.1",
+    "string-progressbar": "^1.0.1"
+  }
+}
