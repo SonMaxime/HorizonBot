@@ -2,7 +2,6 @@ module.exports = {
   TOKEN: "Discord Bot Token",
   FORTNITE: "Fornite Tracker Token",
   MAX_PLAYLIST_SIZE: 25,
-  PRUNING: true,
   STAY_TIME: 10,
   DEFAULT_VOLUME: 100,
   SOUNDCLOUD_CLIENT_ID: "Client ID for Souncloud",
