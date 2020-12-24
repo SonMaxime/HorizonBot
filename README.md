@@ -22,7 +22,7 @@ A French-English Discord bot written in JS who can play some music, save stats o
 - Les modules déjà pré-installés dans le fichier `package.json`.
 
 # Utilisation :
-Comment fonctionne Midnight ? C'est simple comme bonjour ! 
+Comment fonctionne Horizon ? C'est simple comme bonjour ! 
 Utilisez la commande .help pour vous y retrouver,vous pouvez même avoir des informations supplémentaires sur une commande en question. Ex. : .help meme 
 
 # Avec quoi est conçu ce bot ? 
