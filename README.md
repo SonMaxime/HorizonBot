@@ -1,7 +1,6 @@
 # HorizonBot
 A French-English Discord bot written in JS who can play some music, save stats of a server, do fun things, etc..
 
-# Midnight :
 <p>
   <a href="https://github.com/SonMaxime/Midnight.DJS-FR/master/LICENSE" target="_blank">
     <img alt="License: ISC" src="https://img.shields.io/badge/License-ISC-yellow.svg" />
