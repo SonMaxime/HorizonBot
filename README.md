@@ -31,7 +31,8 @@ Ce bot est conçu avec L'API de Discord, celle de https://fortnitetracker.com/ p
 
 # Invitation :
 
-Lien d'invitation du bot : https://discordapp.com/oauth2/authorize?client_id=537678507048960010&scope=bot&permissions=8
+Lien d'invitation du bot : https://discordapp.com/oauth2/authorize?client_id=765641198404501524&scope=bot&permissions=8
+Lien du dashboard : BIENTÔT EN LIGNE
 
 # Contact :
 En cas de problème que ce soit avec le bot ou le code source merci de me le faire savoir via ces moyens de communication ci dessous :
