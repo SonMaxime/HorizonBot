@@ -69,5 +69,6 @@
     "mute": "has mute the music.",
     "lowMusic": "has set the volume on",
     "augMusic": "has set the volume on",
-    "stopMusic": "has stoped the music."
+    "stopMusic": "has stoped the music.",
+    "userLeave": "A user has leaved the guild."
 }

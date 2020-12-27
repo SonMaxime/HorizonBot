@@ -1,0 +1,17 @@
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= title %></title>
+</head>
+<body>
+  <% if (user) { %>
+    <p>Connecté en tant que <%= user.username %>#<%= user.discriminator %>.</p>
+    <a href="/logout">Déconnection</a>
+  <% } else { %>
+    <a type="button" href="/login">Connection</a><br>
+  <% } %>
+  <% if(user && title === "Home") { %>
+    <a type="button" href="/dashboard">Retourner au pannel</a><br>
+  <% } %>
+  <%- title === "Pannel de configuration" ? "" : "<hr>" %>

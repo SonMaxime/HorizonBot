@@ -14,6 +14,7 @@ module.exports = async (client, message,  messageReaction) => {
   });
 
   if (!message.guild.language) {
+    const db = client.db;
     let language = db.has(`${message.guild.id}.language`) ? 
         await db.fetch(`${message.guild.id}.language`) :
         "fr";

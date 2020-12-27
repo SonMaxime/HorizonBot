@@ -1,5 +1,7 @@
+const Dashboard = require("./../../dashboard/dashboard");
+
 module.exports = async client => {
-  console.log(`${client.user.tag} observe les ${client.guilds.cache.map(g => g.memberCount).reduce((a, b) => a + b)} utilisateurs du serveur!`);
+  console.log(`${client.user.tag} est co`);
 
   let activities = ['.help', 'pfp by @ikadakat'], i = 0;
 
@@ -15,6 +17,7 @@ module.exports = async client => {
     }
 
     guild.language = require(`./../../locales/${lang}.json`);
-}
-
+  }
+  
+  Dashboard(client);
 }

@@ -34,6 +34,16 @@ const MESSAGES = {
           permissions: true,
           args: false
         },
+        PATCHNOTE: {
+          name: "patchnote",
+          aliases: ['pn'],
+          category: 'admin',
+          description: "",
+          cooldown: 0,
+          isUserAdmin: true,
+          permissions: false,
+          args: false
+        },
         DM: {
           name: "dm",
           aliases: [''],

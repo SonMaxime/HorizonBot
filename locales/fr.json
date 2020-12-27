@@ -71,5 +71,6 @@
     "mute": "a mute la musique.",
     "lowMusic": "a baissé la musique sur",
     "augMusic": "a augmenté la musique sur",
-    "stopMusic": "a stopté la musique."
+    "stopMusic": "a stopté la musique.",
+    "userLeave": "Un utilisateur(trice) a quitté le serveur."
 }

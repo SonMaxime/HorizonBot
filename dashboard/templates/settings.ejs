@@ -1,0 +1,20 @@
+<%- include("partials/header", { bot, user, path, title: "Home" }) %>
+
+<% if (alert) { %>
+  <p><%= alert %></p><br>
+<% } %>
+
+<h1><%= guild.name %></h1>
+<form style="margin-top: 1em;" method="POST">
+  <p>Prefix:</p>
+  <input type="text" name="prefix" value="<%= settings.prefix %>" placeholder="Votre prefix."><br><br>
+  <button type="submit">Enregistrer les modifications</button>
+  <P>Log Channel :</P>
+  <input type="text" name="logChannel" value="<%= settings.logChannel %>" placeholder="Votre salon de logs."><br><br>
+  <button type="submit">Enregistrer les modifications</button>
+  <p>Welcome Message: </p>
+  <input type="text" name="welcomeMessage" value="<%= settings.welcomeMessage %>" placeholder="Votre message de bienvenue."><br><br>
+  <button type="submit">Enregistrer les modifications</button>
+</form>
+
+<%- include("partials/footer") %>
