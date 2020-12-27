@@ -2,7 +2,7 @@
 
 <% user.guilds.forEach(guild => {
     const permsOnGuild = new perms(guild.permissions);
-    if(!permsOnGuild.has("MANAGE_GUILD")) return
+    if(!permsOnGuild.has("MANAGE_GUILD")) return;
   %>
   <hr>
   <p><%= guild.name %></p>
