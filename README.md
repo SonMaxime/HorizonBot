@@ -1,5 +1,5 @@
 # HorizonBot
-A French-English Discord bot written in JS who can play some music, save stats of a server, do fun things, etc..
+A French-English Discord.js bot who can play some music, save stats of a server, do fun things, etc..
 
 <p>
   <a href="https://github.com/SonMaxime/Midnight.DJS-FR/master/LICENSE" target="_blank">
@@ -21,6 +21,7 @@ A French-English Discord bot written in JS who can play some music, save stats o
 - Un token FortniteTracker : https://tracker.gg/developers/ (à remplacer dans le fichier `config.js` avec FTNTOKEN)
 - Les modules déjà pré-installés dans le fichier `package.json`.
 - Une base de données MongoDB : ![Tutoriel Ici](https://github.com/SonMaxime/HorizonBot/wiki/Base-de-donn%C3%A9es-Mongo.)
+- Une clé d'accès YouTube API : ![Tutoriel Ici]
 
 # Utilisation :
 Comment fonctionne Horizon ? C'est simple comme bonjour ! 
