@@ -1,5 +1,4 @@
 const { canModifyQueue } = require("./../../util/util");
-const { MESSAGES } = require("./../../util/constants");
 
 module.exports.run = (client, message, args, settings) => {
     message.delete();
@@ -43,4 +42,13 @@ module.exports.run = (client, message, args, settings) => {
   .catch(console.error);
 }
 
-module.exports.help = MESSAGES.COMMANDS.MUSIQUE.SKIPTO;
+module.exports.help = {
+  name: "skipto",
+  aliases: ['sk'],
+  description: "Skip jusqu'au numéro du son de la file d'attente.",
+  cooldown: 3,
+  usage: '<Queue Number>',
+  isUserAdmin: false,
+  permissions: false,
+  args: true
+}

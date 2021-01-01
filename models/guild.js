@@ -16,6 +16,10 @@ const guildSchema = mongoose.Schema({
   welcomeMessage: {
     "type": String,
     "default": defaults.welcomeMessage
+  },
+  welcomeChannel: {
+    "type": String,
+    "default": defaults.welcomeChannel
   }
 });
 

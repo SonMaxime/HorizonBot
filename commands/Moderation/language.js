@@ -1,5 +1,4 @@
 const fs = require("fs");
-const { MESSAGES } = require("../../util/constants");
 
 module.exports.run = async (client, message, args, settings) => {
         let lang = args[0];
@@ -18,4 +17,14 @@ module.exports.run = async (client, message, args, settings) => {
         await message.channel.send(message.guild.language.language_updated);
 }
 
-module.exports.help = MESSAGES.COMMANDS.MODERATION.LANGUAGE;
+module.exports.help = {
+    name: "language",
+    aliases: ['lang'],
+    category: 'moderation',
+    description: "Changer de langue sur un serveur",
+    cooldown: 10,
+    usage: '.lang fr/en',
+    isUserAdmin: false,
+    permissions: true,
+    args: false
+}

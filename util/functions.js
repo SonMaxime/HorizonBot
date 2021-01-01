@@ -9,11 +9,6 @@ module.exports = async client => {
     createGuild.save().then(g => console.log(`Nouveau serveur -> ${g.guildName}`));
   };
 
-  client.deleteGuild = client => {
-    const data = Guild.findOne({ guildID: guild.id });
-    getGuild.delete().then(g => console.log(`Serveur retiré : g ${g.guildName}`));
-  };
-
   client.getGuild = async guild => {
     const data = await Guild.findOne({ guildID: guild.id });
     if (data) return data;

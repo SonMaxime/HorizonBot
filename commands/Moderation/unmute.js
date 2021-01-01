@@ -1,7 +1,7 @@
-const { MESSAGES } = require("../../util/constants");
 const { MessageEmbed } = require("discord.js");
 
 module.exports.run = (client, message, args, settings) => {
+  let channel = message.guild.channels.cache.get(c => c.name === settings.logChannel)
   let user = message.guild.member(message.mentions.users.first());
   let muteRole = message.guild.roles.cache.find(r => r.name === 'muted');
 
@@ -16,7 +16,17 @@ module.exports.run = (client, message, args, settings) => {
     .setTimestamp()
     .setFooter(message.author.username, message.author.avatarURL());
     
-  message.channel.send(embed);
+  channel.send(embed);
 };
 
-module.exports.help = MESSAGES.COMMANDS.MODERATION.UNMUTE;
+module.exports.help = {
+  name: "unmute",
+  aliases: ['unmute'],
+  category: 'moderation',
+  description: "Unmute un utilisateur.",
+  cooldown: 10,
+  usage: '<@user>',
+  isUserAdmin: true,
+  permissions: true,
+  args: true
+}

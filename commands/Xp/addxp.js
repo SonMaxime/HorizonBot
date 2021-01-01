@@ -1,4 +1,3 @@
-const { MESSAGES } = require("../../util/constants");
 const { MessageEmbed } = require('discord.js');
 
 module.exports.run = (client, message, args) => {
@@ -12,4 +11,14 @@ module.exports.run = (client, message, args) => {
   message.channel.send(addEmbed);
 };
 
-module.exports.help = MESSAGES.COMMANDS.XP.ADDXP;
+module.exports.help = {
+  name: "addxp",
+  aliases: ['addexperience', 'addexp'],
+  category: 'xp',
+  description: "Ajoute de l'expérience de l'utilisateur.",
+  cooldown: 10,
+  usage: '<user> <amount_of_experience>',
+  isUserAdmin: false,
+  permissions: true,
+  args: true
+}

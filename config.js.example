@@ -14,5 +14,6 @@ module.exports = {
     prefix: ".",
     logChannel: "reports",
     welcomeMessage: "Bienvenue ! {{user}}",
+    welcomeChannel: "bienvenue"
   }
 }

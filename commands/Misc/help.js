@@ -1,5 +1,4 @@
 const { MessageEmbed } = require("discord.js");
-const { MESSAGES } = require('../../util/constants');
 const { readdirSync } = require("fs");
 const categoryList = readdirSync('./commands');
 
@@ -15,7 +14,7 @@ module.exports.run = (client, message, args, settings) => {
         { name: 'Modération', value: `ban, kick, language, mute, purge, unban, unmute ` + message.guild.language.et + ` votekick` },
         { name: 'Musique', value: `nowplaying, play, playlist, queue, remove, search` + message.guild.language.et + `skipto` },
         { name: 'Reedit', value: `anime, hmmm ` + message.guild.language.et + ` meme` },
-        { name: 'Stats', value: `apex ` + message.guild.language.et + ` fortnite` },
+        { name: 'Stats', value: `apex, fortnitedevbuild ` + message.guild.language.et + ` fortnite` },
         { name: 'Xp', value: `addxp, removexp, exp, leaderboard, level ` + message.guild.language.et + ` removexp` }
       );
     return message.channel.send(embed);
@@ -35,4 +34,14 @@ module.exports.run = (client, message, args, settings) => {
   }
 };
 
-module.exports.help = MESSAGES.COMMANDS.MISC.HELP;
+module.exports.help = {
+  name: "help",
+  aliases: ['help'],
+  category: 'misc',
+  description: "Renvoie une liste de commandes ou les informations sur une seule.",
+  cooldown: 3,
+  usage: '<command_name>',
+  isUserAdmin: false,
+  permissions: false,
+  args: false
+}

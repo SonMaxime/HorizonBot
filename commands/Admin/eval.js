@@ -1,5 +1,3 @@
-const { MESSAGES } = require('../../util/constants');
-
 module.exports.run = async (client, message, args) => {
   function clean(text) {
     if (typeof text === "string") 
@@ -14,4 +12,14 @@ module.exports.run = async (client, message, args) => {
   message.channel.send(cleanCode, { code: "js" });
 };
 
-module.exports.help = MESSAGES.COMMANDS.ADMIN.EVAL;
+module.exports.help = {
+  name: "eval",
+  aliases: ['eval'],
+  category: 'admin',
+  description: 'Tester un code javascript. Pour enregister un serveur, tapez client.emit("guildCreate", message.guild), Pour activer les niveaux, tapez client.emit("guildMemberAdd", message.member)',
+  cooldown: 3,
+  usage: '<code_to_test>',
+  isUserAdmin: false,
+  permissions: true,
+  args: true
+}

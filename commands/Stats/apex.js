@@ -1,6 +1,5 @@
 const { MessageEmbed } = require("discord.js");
 const { stripIndents } = require("common-tags");
-const { MESSAGES } = require("../../util/constants");
 const request = require('request')
 
 module.exports.run = async (client, message, args) => {
@@ -52,4 +51,14 @@ module.exports.run = async (client, message, args) => {
         })
 }
 
-module.exports.help = MESSAGES.COMMANDS.STATS.APEX;
+module.exports.help = {
+    name: "apex",
+    aliases: ['apx'],
+    category: 'stats',
+    description: "Affiche les stats d'un joueur sur Apex Legends",
+    cooldown: 10,
+    usage: "<pseudo [pc,xb1,psn]>",
+    isUserAdmin: false,
+    permissions: false,
+    args: false
+}

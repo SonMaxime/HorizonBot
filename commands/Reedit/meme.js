@@ -1,4 +1,3 @@
-const { MESSAGES } = require("../../util/constants");
 const { MessageEmbed } = require('discord.js');
 const randomPuppy = require("random-puppy");
 
@@ -16,4 +15,14 @@ module.exports.run = async (client, message, args) => {
     message.channel.send(embed);
 }
 
-module.exports.help = MESSAGES.COMMANDS.REEDIT.MEME;
+module.exports.help = {
+    name: "meme",
+    aliases: ['meme'],
+    category: 'reedit',
+    description: "Envoie un meme depuis les subReedits me_irl, dankmeme et meme.",
+    cooldown: 10,
+    usage: '',
+    isUserAdmin: false,
+    permissions: false,
+    args: false,
+}

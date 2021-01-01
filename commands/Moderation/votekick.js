@@ -1,5 +1,4 @@
-const Discord  = require('discord.js');
-const { MESSAGES } = require('../../util/constants');
+const Discord = require('discord.js');
 
 const agree    = "✅";
 const disagree = "❎";
@@ -34,8 +33,8 @@ module.exports.run = async (bot, message, args) => {
   var votekick = new Discord.MessageEmbed()
   
             .addField("Vote terminé :", "----------------------------------------\n" +
-                                          `Total votes ` + message.guild.language.yes + ` ${YES_Count-1}\n` +
-                                          `Total votes ` + message.guild.language.no + `${NO_Count-1}\n` +
+                                          `Total votes ` + `${message.guild.language.yes} ` + `${YES_Count-1}\n` +
+                                          `Total votes ` + `${message.guild.language.no} ` + `${NO_Count-1}\n` +
                                           "----------------------------------------\n" +
                                           `${message.guild.language.noteOfKick}\n` +
                                           "----------------------------------------", true)
@@ -55,4 +54,13 @@ module.exports.run = async (bot, message, args) => {
 
 }
 
-module.exports.help = MESSAGES.COMMANDS.MODERATION.VOTEKICK;
+module.exports.help = {
+  name: "votekick",
+  aliases: ['vk'],
+  category: "Vote pour kick un utilisateur.",
+  cooldown: 0,
+  usage: '@user',
+  isUserAdmin: false,
+  permissions: true,
+  args: true
+}

@@ -1,5 +1,4 @@
 const { MessageEmbed } = require("discord.js");
-const { MESSAGES } = require("../../util/constants");
 
 module.exports.run = async (client, message, args) => {
   const embed = new MessageEmbed()
@@ -21,4 +20,14 @@ module.exports.run = async (client, message, args) => {
   await poll.react("🟥");
 };
 
-module.exports.help = MESSAGES.COMMANDS.MISC.POLL;
+module.exports.help = {
+  name: "poll", 
+  aliases: ['poll'],
+  category: 'misc',
+  description: "Faites des sondages caca",
+  cooldown: 20,
+  usage: '',
+  isUserAdmin: false,
+  permissions: false,
+  args: false
+}

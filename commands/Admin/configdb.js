@@ -1,5 +1,3 @@
-const { MESSAGES } = require('../../util/constants');
-
 module.exports.run = async (client, message, args, settings) => {
   const getSetting = args[0];
   const newSetting = args.slice(1).join(" ");
@@ -29,7 +27,25 @@ module.exports.run = async (client, message, args, settings) => {
       message.channel.send(message.guild.language.welcomeMessageActual + `: \`${settings.welcomeMessage}\``);
       break;
     }
+    case "welcomeChannel": {
+      if (newSetting) {
+        await client.updateGuild(message.guild, { welcomeChannel: newSetting });
+        return message.channel.send(message.guild.language.welcomeChannel + `: \`${settings.welcomeChannel}\`-> \`${newSetting}\``);
+      }
+      message.channel.send(message.guild.language.welcomeChannelActual + `: \`${settings.welcomeChannel}\``);
+      break;
+    }
   }
 };
 
-module.exports.help = MESSAGES.COMMANDS.ADMIN.CONFIG;
+module.exports.help = {
+  name: "configdb",
+  aliases: ['configdb'],
+  category: 'admin',
+  description: "Modifier la base de données (prefix, welcomeMessage et logChannel)",
+  cooldown: 3,
+  usage: '<key> <value>',
+  isUserAdmin: false,
+  permissions: true,
+  args: true
+}

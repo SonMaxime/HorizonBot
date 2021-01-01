@@ -1,4 +1,3 @@
-const { MESSAGES } = require("../../util/constants");
 const { MessageEmbed } = require("discord.js");
 const { stripIndents } = require("common-tags");
 const config = require("../../config");
@@ -8,27 +7,6 @@ const ft = new Client (config.FORTNITE);
 
 module.exports.run = async (client, message, args) => {
     const platforms = ["pc", "xb1", "psn"];
-
-    if (args[0].toLowerCase() === "store") {
-        const store = await ft.store();
-
-        const storeEmbed = new MessageEmbed()
-        .setColor("#9d4dbb")
-        .setDescription("Boutique du jour :", message.author.displayAvatarURL())
-        .setTimestamp();
-
-        store.sort((a, b) => {
-            return b.vbucks - a.vbucks;
-        });
-
-        store.forEach(el => {
-            storeEmbed.addField(el.name, stripIndents`**- Rareté:** ${el.rarity}
-            **- Prix:** ${el.vbucks} v-bucks
-            **- Image:** [Appuiez](${el.image})`, true)
-        });
-
-        message.channel.send(storeEmbed);
-    } else {
 
         const lastWord = args[args.length - 1].toLowerCase();
 
@@ -78,7 +56,16 @@ module.exports.run = async (client, message, args) => {
 
         message.channel.send(statsEmbed)
 
-    }
 }
 
-module.exports.help = MESSAGES.COMMANDS.STATS.FORTNITE;
+module.exports.help = {
+    name: "fortnite",
+    aliases: ['ftn'],
+    category: 'stats',
+    description: "Affiche les stats d'un joueur ou la boutique du jour.",
+    cooldown: 10,
+    usage: "<pseudo [pc,xb1,psn] | store>",
+    isUserAdmin: false,
+    permissions: false,
+    args: true
+}

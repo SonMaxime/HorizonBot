@@ -1,7 +1,6 @@
 const { MessageEmbed } = require("discord.js");
 const YouTubeAPI = require("simple-youtube-api");
 const youtube = new YouTubeAPI("AIzaSyAhPLtjqee-H0lINdBEP5a_2rO6UuRtICM");
-const { MESSAGES } = require("./../../util/constants");
 
 module.exports.run = async (client, message, args, settings) => {
     message.delete();
@@ -67,4 +66,13 @@ module.exports.run = async (client, message, args, settings) => {
     }
   }
 
-module.exports.help = MESSAGES.COMMANDS.MUSIQUE.SEARCH;
+module.exports.help = {
+  name: "search",
+  aliases: ['se'],
+  description: "Recherche et affiche un résultat pour une viéo présice.",
+  cooldown: 3,
+  usage: '.search <Video Name>',
+  isUserAdmin: false,
+  permissions: false,
+  args: true
+}

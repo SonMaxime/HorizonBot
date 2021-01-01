@@ -1,4 +1,3 @@
-const { MESSAGES } = require("../../util/constants");
 const { MessageEmbed } = require('discord.js');
 const randomPuppy = require("random-puppy");
 
@@ -16,4 +15,14 @@ module.exports.run = async (client, message, args) => {
     message.channel.send(embed);
 }
 
-module.exports.help = MESSAGES.COMMANDS.REEDIT.HMMM;
+module.exports.help = {
+    name: "hmmm",
+    aliases: ['hmmm'],
+    category: 'reedit',
+    description: "Envoie un hmmm depuis le subReedit :/r/hmmm.",
+    cooldown: 10,
+    usage: '',
+    isUserAdmin: false,
+    permissions: false,
+    args: false
+}

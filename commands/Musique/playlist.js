@@ -4,7 +4,6 @@ const YouTubeAPI = require("simple-youtube-api");
 const scdl = require("soundcloud-downloader").default;
 const { YOUTUBE_API_KEY, SOUNDCLOUD_CLIENT_ID, MAX_PLAYLIST_SIZE, DEFAULT_VOLUME } = require("./../../util/util");
 const youtube = new YouTubeAPI("AIzaSyAhPLtjqee-H0lINdBEP5a_2rO6UuRtICM");
-const { MESSAGES } = require("./../../util/constants");
 
 module.exports.run = async (client, message, args, settings) => {
     const { channel } = message.member.voice;
@@ -141,4 +140,13 @@ module.exports.run = async (client, message, args, settings) => {
     }
   }
 
-module.exports.help = MESSAGES.COMMANDS.MUSIQUE.PLAYLIST;
+module.exports.help = {
+  name: "playlist",
+  aliases: ['pl'],
+  description: "Joue une playlist depuis YouTube.",
+  cooldown: 3,
+  usage: '<YouTube Playlist URL | Playlist Name>',
+  isUserAdmin: false,
+  permissions: false,
+  args: true
+}

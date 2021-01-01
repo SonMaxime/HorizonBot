@@ -145,6 +145,7 @@ module.exports = async (client) => {
         storedSettings.prefix = req.body.prefix;
         storedSettings.logChannel = req.body.logChannel;
         storedSettings.welcomeMessage = req.body.welcomeMessage;
+        storedSettings.welcomeChannel = req.body.welcomeChannel;
         await storedSettings.save().catch(() => {});
 
         renderTemplate(res, req, "settings.ejs", { guild, settings: storedSettings, alert: "Vos paramettres ont été enregistré." });

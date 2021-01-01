@@ -1,8 +1,8 @@
 const ms = require("ms");
-const { MESSAGES } = require("../../util/constants");
 const { MessageEmbed } = require("discord.js");
 
 module.exports.run = async (client, message, args, settings) => {
+  let channel = message.guild.channels.cache.get(c => c.name === settings.logChannel)
   let user = message.guild.member(message.mentions.users.first());
   let muteRole = message.guild.roles.cache.find(r => r.name === 'muted');
   let muteTime = (args[1] || '60s');
@@ -39,7 +39,17 @@ module.exports.run = async (client, message, args, settings) => {
     .setTimestamp()
     .setFooter(message.author.username, message.author.avatarURL());
     
-  message.channel.send(embed);
+  channel.send(embed);
 };
 
-module.exports.help = MESSAGES.COMMANDS.MODERATION.MUTE;
+module.exports.help = {
+  name: "mute",
+  aliases: ['mute'],
+  category: 'moderation',
+  description: "Mute un utilisateur.",
+  cooldown: 10,
+  usage: '<@user> <time>',
+  isUserAdmin: true,
+  permissions: true,
+  args: true
+}

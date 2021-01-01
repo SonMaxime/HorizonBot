@@ -1,4 +1,3 @@
-const { MESSAGES } = require("../../util/constants");
 const { MessageEmbed } = require("discord.js");
 const { promptMessage } = require("../../util/resfunctions.js")
 const chooseArr = ["🗻", "📰", "✂"];
@@ -36,4 +35,14 @@ module.exports.run = async (client, message, args) => {
   }
 };
 
-module.exports.help = MESSAGES.COMMANDS.FUN.RPS;
+module.exports.help = {
+  name: "rps",
+  aliases: [''],
+  category: 'fun',
+  description: "Piere, feuille, ciseaux !",
+  cooldown: 10,
+  usage: "",
+  isUserAdmin: false,
+  permissions: false,
+  args: false
+}

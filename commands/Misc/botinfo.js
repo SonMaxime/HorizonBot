@@ -1,5 +1,4 @@
 const { MessageEmbed } = require("discord.js");
-const { MESSAGES } = require("../../util/constants");
 
 module.exports.run = (client, message, args) => {
   const embed = new MessageEmbed()
@@ -19,4 +18,14 @@ module.exports.run = (client, message, args) => {
 		message.channel.send(embed);
 };
 
-module.exports.help = MESSAGES.COMMANDS.MISC.BOTINFO;
+module.exports.help = {
+  name: "botinfo",
+  aliases: ['bi'],
+  category: 'misc',
+  description: "Renvoie les informations sur le bot.",
+  cooldown: 3,
+  usage: '',
+  isUserAdmin: false,
+  permissions: false,
+  args: false
+}

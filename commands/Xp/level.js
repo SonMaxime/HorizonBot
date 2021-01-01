@@ -1,4 +1,3 @@
-const { MESSAGES } = require("../../util/constants");
 const { MessageEmbed } = require('discord.js');
 
 module.exports.run = (client, message, args, settings, dbUser) => {
@@ -11,4 +10,14 @@ module.exports.run = (client, message, args, settings, dbUser) => {
   message.channel.send(embed)
 };
 
-module.exports.help = MESSAGES.COMMANDS.XP.LEVEL;
+module.exports.help = {
+  name: "level",
+  aliases: ['level'],
+  category: 'xp',
+  description: "Renvoie le niveau de l'utilisateur.",
+  cooldown: 10,
+  usage: '',
+  isUserAdmin: false,
+  permissions: false,
+  args: false
+}

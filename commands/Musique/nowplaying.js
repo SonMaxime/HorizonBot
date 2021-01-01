@@ -1,6 +1,5 @@
 const createBar = require("string-progressbar");
 const { MessageEmbed } = require("discord.js");
-const { MESSAGES } = require("./../../util/constants");
 
 module.exports.run = (client, message, args, settings) => {
     message.delete();
@@ -37,4 +36,13 @@ module.exports.run = (client, message, args, settings) => {
     .catch(console.error);
 }
 
-module.exports.help = MESSAGES.COMMANDS.MUSIQUE.NOWPLAYING;
+module.exports.help = {
+  name: "nowplaying",
+  aliases: ['np'],
+  description: "Montre le son joué actuellement",
+  cooldown: 3,
+  usage: '',
+  isUserAdmin: false,
+  permissions: false,
+  args: false
+}

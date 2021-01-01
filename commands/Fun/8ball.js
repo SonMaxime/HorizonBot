@@ -1,4 +1,3 @@
-const { MESSAGES } = require('../../util/constants');
 const { MessageEmbed, Message } = require('discord.js');
 
 module.exports.run = async (client, message, args) => {
@@ -14,4 +13,14 @@ module.exports.run = async (client, message, args) => {
     message.channel.send(embed)
 };
 
-module.exports.help = MESSAGES.COMMANDS.FUN.EIGHTBALL;
+module.exports.help = {
+    name: "8ball",
+    aliases: ['8', '8b'],
+    category: 'fun',
+    description: "Mystère et boule de gomme...",
+    cooldown: 10,
+    usage: "<question>",
+    isUserAdmin: false,
+    permissions: false,
+    args: true
+}

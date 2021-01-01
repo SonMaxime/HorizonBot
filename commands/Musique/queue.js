@@ -1,5 +1,4 @@
 const { MessageEmbed } = require("discord.js");
-const { MESSAGES } = require("./../../util/constants");
 
 module.exports.run = async (client, message, args, settings) => {
     message.delete();
@@ -94,4 +93,13 @@ function generateQueueEmbed(message, queue) {
   return embeds;
 }
 
-module.exports.help = MESSAGES.COMMANDS.MUSIQUE.QUEUE;
+module.exports.help = {
+  name: "queue",
+  aliases: ['q'],
+  description: "Montre la file d'attente actuelle et le son joué actuellement.",
+  cooldown: 3,
+  usage: '',
+  isUserAdmin: false,
+  permissions: false,
+  args: false
+}

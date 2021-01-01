@@ -1,6 +1,5 @@
 const fetch = require("node-fetch");
 const { MessageEmbed, Message } = require("discord.js");
-const { MESSAGES } = require("../../util/constants");
 
 module.exports.run = async (client, message, args) => {
   const anime = await fetch(`https://www.reddit.com/user/emdix/m/animemes/top/.json?sort=top&t=day&limit=500`)
@@ -17,4 +16,14 @@ module.exports.run = async (client, message, args) => {
   message.channel.send(embed);
 };
 
-module.exports.help = MESSAGES.COMMANDS.REEDIT.ANIME;
+module.exports.help = {
+  name: "anime",
+  aliases: ['anime'],
+  category: 'reedit',
+  description: "Envoie un meme depuis les subReedits me_irl, dankmeme et meme.",
+  cooldown: 10,
+  usage: '',
+  isUserAdmin: false,
+  permissions: false,
+  args: false
+}

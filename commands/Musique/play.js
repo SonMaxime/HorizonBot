@@ -5,7 +5,6 @@ const scdl = require("soundcloud-downloader").default;
 const https = require("https");
 const { SOUNDCLOUD_CLIENT_ID, DEFAULT_VOLUME } = require("./../../util/util");
 const youtube = new YouTubeAPI("AIzaSyAhPLtjqee-H0lINdBEP5a_2rO6UuRtICM");
-const { MESSAGES } = require("./../../util/constants");
 
 module.exports.run = async (client, message, args, settings) => {
     message.delete();
@@ -159,4 +158,13 @@ module.exports.run = async (client, message, args, settings) => {
     }
   }
 
-module.exports.help = MESSAGES.COMMANDS.MUSIQUE.PLAY;
+module.exports.help = {
+  name: "play",
+  aliases: ['p'],
+  description: "Joue un son depuis YouTube ou Soundcloud",
+  cooldown: 3,
+  usage: '<YouTube URL | Nom de la video | Soundcloud URL>',
+  isUserAdmin: false,
+  permissions: false,
+  args: true
+}

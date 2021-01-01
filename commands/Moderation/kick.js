@@ -1,7 +1,7 @@
-const { MESSAGES } = require("../../util/constants");
 const { MessageEmbed } = require("discord.js");
 
 module.exports.run = (client, message, args, settings) => {
+  let channel = message.guild.channels.cache.get(c => c.name === settings.logChannel)
   let user = message.mentions.users.first();
   let reason = (args.splice(1).join(' ') || message.guild.language.noReason);
   user ? message.guild.member(user).kick(reason) : message.channel.send(message.guild.language.userNoExist);
@@ -14,7 +14,17 @@ module.exports.run = (client, message, args, settings) => {
     .setTimestamp()
     .setFooter(message.author.username, message.author.avatarURL());
     
-  message.channel.send(embed);
+  channel.send(embed);
 };
 
-module.exports.help = MESSAGES.COMMANDS.MODERATION.KICK;
+module.exports.help = {
+  name: "kick",
+  aliases: ['kick'],
+  category: 'moderation',
+  description: "Kick un utilisateur.",
+  cooldown: 10,
+  usage: '<@user> <raison>',
+  isUserAdmin: true,
+  permissions: true,
+  args: true
+}
