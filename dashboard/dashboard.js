@@ -11,7 +11,6 @@ const Discord = require("discord.js");
 const GuildSettings = require("../models/guild");
 
 const app = express();
-const MemoryStore = require("memorystore")(session);
 
 module.exports = async (client) => {
   const dataDir = path.resolve(`${process.cwd()}${path.sep}dashboard`);
