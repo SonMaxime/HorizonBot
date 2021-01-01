@@ -7,5 +7,5 @@ module.exports = (client, message, member, settings) => {
    .setColor('BLACK')
    .setDescription(`Goodbye... ${user} :(`)
    
-   channel.send(embed)
+   channel.send(embed).catch(console.error)
 }
