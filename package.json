@@ -3,7 +3,11 @@
   "version": "1.2.1",
   "description": "A French-English Discord bot written in JS who can play some music, save stats of a server, do fun things, etc..",
   "main": "main.js",
+  "engines": {
+    "node": "15.x"
+  },
   "scripts": {
+    "start": "node main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "SonMaxime",
