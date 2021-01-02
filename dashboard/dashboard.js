@@ -4,7 +4,7 @@ const express = require("express");
 const passport = require("passport");
 const session = require("express-session");
 const Strategy = require("passport-discord").Strategy;
-const config = require("../config");
+const config = client.config();
 const ejs = require("ejs");
 const bodyParser = require("body-parser");
 const Discord = require("discord.js");
@@ -150,5 +150,5 @@ module.exports = async (client) => {
         renderTemplate(res, req, "settings.ejs", { guild, settings: storedSettings, alert: "Vos paramettres ont été enregistré." });
     });
 
-  app.listen(config.port, null, null, () => console.log(`Dashboard is up and running on port ${config.port}.`));
+  app.listen(config.port, null, null, () => console.log(`Dashboard is up and running on port ${process.env.PORT}.`));
 };
