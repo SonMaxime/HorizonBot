@@ -5,7 +5,7 @@ const { Database } = require("bookman");
 
 const client = new Client({ partials: ['MESSAGE', 'CHANNEL', 'REACTION'] });;
 require("./util/functions")(client);
-client.config = require("./config");
+client.config = require('dotenv');
 client.commands = new Collection();
 client.queue = new Map();
 client.db = new Database("database/main");
@@ -16,4 +16,4 @@ loadCommands(client);
 loadEvents(client);
 client.mongoose.init();
 
-client.login(client.config.TOKEN);
+client.login(process.env.BOT_TOKEN);
