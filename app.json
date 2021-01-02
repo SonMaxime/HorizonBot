@@ -19,7 +19,7 @@
       "description": "The Website URL [https://<heroku_app_name>.herokuapp.com]",    
       "value": "https://<heroku_app_name>.herokuapp.com"
     },
-    "MONGO_URI": {
+    "DBCONNECTION": {
       "description": "The MongoDB URI to your database [i.e. from MongoDB Atlas].",
       "value": "mongodb+srv://<username>:<password>@<hostname>/HorizonBot?retryWrites=true&w=majority"
     },
