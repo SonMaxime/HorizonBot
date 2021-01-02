@@ -23,6 +23,8 @@ A French-English Discord.js bot who can play some music, save stats of a server,
 - Une base de données MongoDB : ![Tutoriel Ici](https://github.com/SonMaxime/HorizonBot/wiki/Base-de-donn%C3%A9es-Mongo.)
 - Une clé d'accès YouTube API : ![Tutoriel Ici]
 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/SonMaxime/HorizonBot/tree/heroku)
+
 # Utilisation :
 Comment fonctionne Horizon ? C'est simple comme bonjour ! 
 Utilisez la commande .help pour vous y retrouver,vous pouvez même avoir des informations supplémentaires sur une commande en question. Ex. : .help meme 
