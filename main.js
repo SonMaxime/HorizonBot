@@ -1,11 +1,13 @@
 const { Client, Collection } = require('discord.js');
 const { loadCommands, loadEvents } = require("./util/loader");
 const { Database } = require("bookman");
+const { config } = require('dotenv');
+config();
 
 
 const client = new Client({ partials: ['MESSAGE', 'CHANNEL', 'REACTION'] });;
 require("./util/functions")(client);
-client.config = require('dotenv');
+client.config = process.env
 client.commands = new Collection();
 client.queue = new Map();
 client.db = new Database("database/main");
