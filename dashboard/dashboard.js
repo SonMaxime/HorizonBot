@@ -22,7 +22,7 @@ module.exports = async (client) => {
   passport.use(new Strategy({
     clientID: config.id,
     clientSecret: config.clientSecret,
-    callbackURL: `${config.domain}${config.port == 80 ? "" : `:${config.port}`}/callback`,
+    callbackURL: `${process.env.DASHBOARD_URL}${config.port == 80 ? "" : `:${process.env.PORT}`}/callback`,
     scope: ["identify", "guilds"]
   },
   (accessToken, refreshToken, profile, done) => {
