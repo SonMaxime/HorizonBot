@@ -1,17 +1,20 @@
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><%= title %></title>
-</head>
-<body>
-  <% if (user) { %>
-    <p>Connecté en tant que <%= user.username %>#<%= user.discriminator %>.</p>
-    <a href="/logout">Déconnection</a>
-  <% } else { %>
-    <a type="button" href="/login">Connection</a><br>
-  <% } %>
-  <% if(user && title === "Home") { %>
-    <a type="button" href="/dashboard">Retourner au pannel</a><br>
-  <% } %>
-  <%- title === "Pannel de configuration" ? "" : "<hr>" %>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <a class="navbar-brand" href="/">Horizon Bot</a>
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item">
+      <% if (user) { %>
+        <p>Connecté en tant que <%= user.username %>#<%= user.discriminator %>.</p>
+        <a href="/logout">Déconnection</a>
+      <% } else { %>
+        <a type="button" href="/login">Connection</a><br>
+      <% } %>
+    </li>
+    <div class="nav-item">
+      <p> </p>
+    </div>
+  </div>
+    <li class="nav-item">
+      <a href="/dashboard">Aller au pannel de configuration</a><br>
+    </li>
+  </ul>
+</nav>
