@@ -1,4 +1,5 @@
 module.exports.run = async (client, message, args, settings) => {
+  if (message.author.id !== "492402867953467392") return;
   await message.delete();
   await message.channel.send(message.guild.language.restartBot);
   process.exit();
@@ -7,7 +8,7 @@ module.exports.run = async (client, message, args, settings) => {
 module.exports.help = {
   name: "reload",
   aliases: ['reload'],
-  category: 'admin',
+  category: 'owner',
   description: "Relancer le bot.",
   cooldown: 3,
   usage: '',

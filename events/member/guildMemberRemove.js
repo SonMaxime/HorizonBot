@@ -5,7 +5,5 @@ module.exports = (client, message, member, settings) => {
   
    const embed = new MessageEmbed()
    .setColor('BLACK')
-   .setDescription(`Goodbye... ${user} :(`)
-   
-   channel.send(embed).catch(console.error)
+   .setDescription(`Welcome ${user}`)
 }

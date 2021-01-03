@@ -1,6 +1,6 @@
 const { Collection } = require('discord.js');
 
-module.exports = async (client, message,  messageReaction) => {
+module.exports = async (client, message, messageReaction) => {
   const settings = await client.getGuild(message.guild);
   const dbUser = await client.getUser(message.member);
 

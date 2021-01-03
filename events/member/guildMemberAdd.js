@@ -6,8 +6,6 @@ module.exports = async (client, member, settings) => {
   const embed = new MessageEmbed()
   .setColor('BLACK')
   .setDescription(`Welcome ${user}`)
-  
-  channel.send(embed).catch(console.error)
 
   await client.createUser({
     guildID: member.guild.id,

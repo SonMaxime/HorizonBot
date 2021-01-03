@@ -2,7 +2,7 @@ const mongoose = require("mongoose");
 const { Guild, User } = require("../models/index");
 const message = require("../events/message/message");
 
-module.exports = async client => {
+module.exports = async (client, message) => {
   client.createGuild = async guild => {
     const merged = Object.assign({ _id: mongoose.Types.ObjectId() }, guild);
     const createGuild = await new Guild(merged);

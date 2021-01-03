@@ -27,7 +27,7 @@ module.exports.run = (client, message, args, settings) => {
       .setTitle(`\`${command.help.name}\``)
       .addField("Description", `${command.help.description} (cd: ${command.help.cooldown}secs)`)
       .addField("Usage", command.help.usage ? `${settings.prefix}${command.help.name} ${command.help.usage}` : `${settings.prefix}${command.help.name}`, true)
-      .setFooter(`Permission: ${command.help.permissions ? "Admin only" : "Tout le monde peut utiliser"}`)
+      .setFooter(`Permission: ${command.help.permissions ? "Admin only" : "@everyone"}`)
 
     if (command.help.aliases.length > 1) embed.addField("Alias", `${command.help.aliases.join(', ')}`, true);
     return message.channel.send(embed);

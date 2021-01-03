@@ -23,17 +23,9 @@ module.exports = {
       setTimeout(function () {
         if (queue.connection.dispatcher && message.guild.me.voice.channel) return;
         queue.channel.leave();
-        queue.textChannel.send("Quitte le vocal...")
-        .then(msg => {
-          msg.delete({ timeout: 2000 })
-        })
-        .catch(console.error);
+        queue.textChannel.send("Quitte le vocal...").then(msg => { msg.delete({ timeout: 2000 })}).catch(console.error);
       }, STAY_TIME * 1000);
-      queue.textChannel.send("❌ File d'attente terminée.")
-      .then(msg => {
-        msg.delete({ timeout: 2000 })
-      })
-      .catch(console.error);
+      queue.textChannel.send("❌ File d'attente terminée.").then(msg => { msg.delete({ timeout: 2000 })}).catch(console.error);
       return message.client.queue.delete(message.guild.id);
     }
 
