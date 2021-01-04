@@ -1,6 +1,6 @@
 const Dashboard = require("./../../dashboard/dashboard");
 
-module.exports = async client => {
+module.exports = async (client, message) => {
   console.log(`${client.user.tag} est co`);
 
   let activities = ['.help', 'pfp by @ikadakat'], i = 0;

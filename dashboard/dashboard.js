@@ -78,7 +78,7 @@ module.exports = async (client) => {
   },
   passport.authenticate("discord"));
 
-  app.get("/callback", passport.authenticate("discord", { failureRedirect: "/" }), (req, res) => {
+  app.get("/callback", passport.authenticate("discord", { failureRedirect: "/" }), async (req, res) => {
     if (req.session.backURL) {
       const url = req.session.backURL;
       req.session.backURL = null;

@@ -11,7 +11,7 @@ module.exports.run = (client, message, args) => {
       { name: 'Serveurs', value: `${client.guilds.cache.size.toString()}`, inline: true },
       { name: 'Salons', value: `${client.channels.cache.size.toString()}`, inline: true },
       { name: 'Utilisateurs', value: `${client.guilds.cache.map(g => g.memberCount).reduce((a, b) => a + b)}`, inline: true },
-      { name: 'Version', value: `discord.js@12.2.0`, inline: true },
+      { name: 'Version', value: `discord.js@12.5.1`, inline: true },
       { name: 'Support', value: `[Server Invite](https://discord.gg/jmdwPME)`, inline: true }
     );
 
