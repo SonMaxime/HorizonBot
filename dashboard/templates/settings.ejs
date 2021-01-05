@@ -5,10 +5,9 @@
   <p><%= alert %></p><br>
 <% } %>
 
-<h1><%= guild.name %></h1>
 <style>
   body {
-    background: #393e46;
+    background: #5D5D5D;
     color: #eeeeee;
     font-family: Arial;
     font-size: 16px;
@@ -17,21 +16,26 @@
 
 <form style="margin-top: 1em;" method="POST">
   <style>
+    h1 {
+      text-align: center;
+      text-shadow: 2px 2px 5px #393e46;
+    }
     input {
       color: #393e46;
     }
   </style>
+  <h1><%= guild.name %></h1>
   <p>Prefix:</p>
-  <input type="text" name="prefix" value="<%= settings.prefix %>"><br><br>
+  <li style="float:center"></li><input type="text" name="prefix" value="<%= settings.prefix %>"><br><br>
   <button type="submit">Enregistrer les modifications</button>
   <P>Log channel :</P>
-  <input type="text" name="logChannel" value="<%= settings.logChannel %>"><br><br>
+  <li style="float:center"></li><input type="text" name="logChannel" value="<%= settings.logChannel %>"><br><br>
   <button type="submit">Enregistrer les modifications</button>
   <p>Welcome message: </p>
-  <input type="text" name="welcomeMessage" value="<%= settings.welcomeMessage %>"><br><br>
+  <li style="float:center"></li><input type="text" name="welcomeMessage" value="<%= settings.welcomeMessage %>"><br><br>
   <button type="submit">Enregistrer les modifications</button>
   <p>Welcome channel: </p>
-  <input type="text" name="welcomeChannel" value="<%= settings.welcomeChannel %>"><br><br>
+  <li style="float:center"></li><input type="text" name="welcomeChannel" value="<%= settings.welcomeChannel %>"><br><br>
   <button type="submit">Enregistrer les modifications</button>
 </form>
 
