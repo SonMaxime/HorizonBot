@@ -19,7 +19,7 @@ module.exports.help = {
     name: "hmmm",
     aliases: ['hmmm'],
     category: 'reedit',
-    description: "Envoie un hmmm depuis le subReedit :/r/hmmm.",
+    description: "🇫🇷 Envoie un hmmm depuis le subReedit :/r/hmmm. \n🇬🇧 Send a meme from the ''hmmm'' subReedit.",
     cooldown: 10,
     usage: '',
     isUserAdmin: false,

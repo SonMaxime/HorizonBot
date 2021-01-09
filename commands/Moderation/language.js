@@ -21,7 +21,7 @@ module.exports.help = {
     name: "language",
     aliases: ['lang'],
     category: 'moderation',
-    description: "Changer de langue sur un serveur",
+    description: "🇫🇷 Changer de langue sur un serveur. \n🇬🇧 Change language of a guild.",
     cooldown: 10,
     usage: '.lang fr/en',
     isUserAdmin: false,

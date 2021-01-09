@@ -28,7 +28,7 @@ module.exports.run = (client, message, args, settings) => {
 module.exports.help = {
   name: "remove",
   aliases: ['rm'],
-  description: "Retire un son de la file d'attente.",
+  description: "🇫🇷 Retire un son de la file d'attente. \n🇬🇧 Remove a song from the queue.",
   cooldown: 3,
   usage: '<Queue Number>',
   isUserAdmin: false,

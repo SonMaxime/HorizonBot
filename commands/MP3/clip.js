@@ -40,9 +40,9 @@ module.exports.help = {
     name: "clip",
     aliases: ['clip'],
     category: 'mp3',
-    description: "Joue un meme dans un salon vocal",
+    description: "🇫🇷 Joue un meme dans un salon vocal. \n🇬🇧 Play a meme in a vocal channel.",
     cooldown: 3,
-    usage: '',
+    usage: '<name of the meme>',
     isUserAdmin: false,
     permissions: false,
     args: false

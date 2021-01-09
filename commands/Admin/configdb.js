@@ -35,6 +35,14 @@ module.exports.run = async (client, message, args, settings) => {
       message.channel.send(message.guild.language.welcomeChannelActual + `: \`${settings.welcomeChannel}\``);
       break;
     }
+    case "leaveMessage": {
+      if (newSetting) {
+        await client.updateGuild(message.guild, { leaveMessage: newSetting });
+        return message.channel.send(message.guild.language.leaveMessage + `: \`${settings.leaveMessage}\`-> \`${newSetting}\``);
+      }
+      message.channel.send(message.guild.language.leaveMessageActual + `: \`${settings.leaveMessage}\``);
+      break;
+    }
   }
 };
 

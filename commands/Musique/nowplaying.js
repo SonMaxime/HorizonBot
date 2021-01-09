@@ -39,7 +39,7 @@ module.exports.run = (client, message, args, settings) => {
 module.exports.help = {
   name: "nowplaying",
   aliases: ['np'],
-  description: "Montre le son joué actuellement",
+  description: "🇫🇷 Montre le son joué actuellement. \n🇬🇧 Display the song played;",
   cooldown: 3,
   usage: '',
   isUserAdmin: false,

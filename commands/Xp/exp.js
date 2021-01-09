@@ -5,14 +5,15 @@ module.exports.run = async (client, message, args, settings, dbUser) => {
 
   const userEmbed = new MessageEmbed()
   .setColor('BLACK')
-  .setDescription(`Vous possédez ${dbUser.experience} points d'expérience !`)
+  .setDescription(message.guild.language.uHave + `${dbUser.experience}` + message.guild.language.xpInStock)
+  message.channel.send(userEmbed);
 };
 
 module.exports.help = {
   name: "exp",
   aliases: ['exp'],
   category: 'xp',
-  description: "Renvoie l'expérience de l'utilisateur.",
+  description: "🇫🇷 Renvoie l'expérience de l'utilisateur. \n🇬🇧 Display the amount of xp of a user.",
   cooldown: 10,
   usage: '',
   isUserAdmin: false,

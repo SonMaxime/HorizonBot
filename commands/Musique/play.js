@@ -161,7 +161,7 @@ module.exports.run = async (client, message, args, settings) => {
 module.exports.help = {
   name: "play",
   aliases: ['p'],
-  description: "Joue un son depuis YouTube ou Soundcloud",
+  description: "🇫🇷 Joue un son depuis YouTube ou Soundcloud. \n🇬🇧 Play a song from YT or SoundCloud.",
   cooldown: 3,
   usage: '<YouTube URL | Nom de la video | Soundcloud URL>',
   isUserAdmin: false,

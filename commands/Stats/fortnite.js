@@ -23,7 +23,7 @@ module.exports.run = async (client, message, args) => {
         const search = await ft.user(usermame, platform);
 
         if (!search.username) {
-            return message.reply("Je ne trouve personne de ce nom, réessayez.")
+            return message.reply("Not found, try again.")
             .then(m => m.delete(5000))
         }
 
@@ -62,9 +62,9 @@ module.exports.help = {
     name: "fortnite",
     aliases: ['ftn'],
     category: 'stats',
-    description: "Affiche les stats d'un joueur ou la boutique du jour.",
+    description: "🇫🇷 Affiche les stats d'un joueur Fortnite. \n🇬🇧 Display some stats of a Fortnite player.",
     cooldown: 10,
-    usage: "<pseudo [pc,xb1,psn] | store>",
+    usage: "<pseudo [pc,xb1,psn]>",
     isUserAdmin: false,
     permissions: false,
     args: true

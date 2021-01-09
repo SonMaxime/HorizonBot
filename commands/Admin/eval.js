@@ -16,7 +16,7 @@ module.exports.help = {
   name: "eval",
   aliases: ['eval'],
   category: 'admin',
-  description: 'Tester un code javascript. Pour enregister un serveur, tapez client.emit("guildCreate", message.guild), Pour activer les niveaux, tapez client.emit("guildMemberAdd", message.member)',
+  description: `🇫🇷 Tester un code javascript. Pour enregister un serveur, tapez client.emit("guildCreate", message.guild), Pour activer les niveaux, tapez client.emit("guildMemberAdd", message.member). \n🇬🇧 Test javascript program. For activate guild/xp database, use the arguments on the top.`,
   cooldown: 3,
   usage: '<code_to_test>',
   isUserAdmin: false,

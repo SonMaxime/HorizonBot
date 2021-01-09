@@ -24,7 +24,7 @@ module.exports.help = {
   name: "poll", 
   aliases: ['poll'],
   category: 'misc',
-  description: "Faites des sondages caca",
+  description: "🇫🇷 Créez des sondages simples à partir de cette commande. \n🇬🇧 Create some simple polls w/ this command.",
   cooldown: 20,
   usage: '',
   isUserAdmin: false,

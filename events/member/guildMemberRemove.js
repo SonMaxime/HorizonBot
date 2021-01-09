@@ -1,9 +1,14 @@
 const { MessageEmbed } = require("discord.js");
 
-module.exports = (client, message, member, settings) => {
-   let channel = message.guild.channels.cache.get(c => c.name === settings.welcomeChannel);
-  
+module.exports = async (client, message, member, settings) => {
+   let data =  await Guild.findOne({
+      guildID: member.guild.id
+   });
+   let channel = member.guild.channels.cache.find(ch => ch.name == data.welcomeChannel);
+   if(channel) return;
+    
    const embed = new MessageEmbed()
    .setColor('BLACK')
-   .setDescription(`Welcome ${user}`)
+   .setDescription(data.welcomeMessage)
+   channel.send(embed);
 }

@@ -16,9 +16,9 @@ module.exports.help = {
   name: "purge",
   aliases: ['purge'],
   category: 'moderation',
-  description: "Purge un nombre de message spécifié.",
+  description: "🇫🇷 Purge un nombre de message spécifié. \n🇬🇧 Purge a specific number of messages.",
   cooldown: 10,
-  usage: '<nbr_messages>',
+  usage: '<nbr_messages> (100 limit + only messages from 14 days ago.)',
   isUserAdmin: false,
   permissions: true,
   args: true

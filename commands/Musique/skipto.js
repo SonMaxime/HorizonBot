@@ -45,7 +45,7 @@ module.exports.run = (client, message, args, settings) => {
 module.exports.help = {
   name: "skipto",
   aliases: ['sk'],
-  description: "Skip jusqu'au numéro du son de la file d'attente.",
+  description: "🇫🇷 Skip jusqu'au numéro du son de la file d'attente. \n🇬🇧 Skip to the number of the song in the queue.",
   cooldown: 3,
   usage: '<Queue Number>',
   isUserAdmin: false,

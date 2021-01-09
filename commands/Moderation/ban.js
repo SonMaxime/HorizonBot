@@ -10,9 +10,9 @@ module.exports.help = {
   name: "ban",
   aliases: ['ban'],
   category: 'moderation',
-  description: "Ban un utilisateur.",
+  description: "🇫🇷 Ban un utilisateur. \n🇬🇧 Ban a user.",
   cooldown: 10,
-  usage: '<@user> <raison>',
+  usage: '<@user> <reason>',
   isUserAdmin: true,
   permissions: true,
   args: true

@@ -17,7 +17,7 @@ module.exports.help = {
     name: "8ball",
     aliases: ['8', '8b'],
     category: 'fun',
-    description: "Mystère et boule de gomme...",
+    description: "🇫🇷 Mystère et boule de gomme... \n🇬🇧 Mystery...",
     cooldown: 10,
     usage: "<question>",
     isUserAdmin: false,

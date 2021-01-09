@@ -39,7 +39,7 @@ module.exports.help = {
   name: "rps",
   aliases: [''],
   category: 'fun',
-  description: "Piere, feuille, ciseaux !",
+  description: "🇫🇷 Piere, feuille, ciseaux ! \n🇬🇧 Rock, paper, Scisors !",
   cooldown: 10,
   usage: "",
   isUserAdmin: false,

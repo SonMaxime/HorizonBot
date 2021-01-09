@@ -10,7 +10,7 @@ module.exports.help = {
   name: "unban",
   aliases: ['unban'],
   category: 'moderation',
-  description: "Unban un utilisateur.",
+  description: "🇫🇷 Unban un utilisateur. \n🇬🇧 Unban a user.",
   cooldown: 10,
   usage: '<user_id>',
   isUserAdmin: false,

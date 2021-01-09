@@ -143,7 +143,7 @@ module.exports.run = async (client, message, args, settings) => {
 module.exports.help = {
   name: "playlist",
   aliases: ['pl'],
-  description: "Joue une playlist depuis YouTube.",
+  description: "🇫🇷 Joue une playlist depuis YouTube. \n🇬🇧 Play a playlist from YT.",
   cooldown: 3,
   usage: '<YouTube Playlist URL | Playlist Name>',
   isUserAdmin: false,

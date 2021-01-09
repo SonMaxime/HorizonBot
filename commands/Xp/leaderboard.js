@@ -21,7 +21,7 @@ module.exports.help = {
   name: "leaderboard",
   aliases: ['lead', 'classement', 'class'],
   category: 'xp',
-  description: "Affiche le clasement (Top 3) des membres sur le serveur.",
+  description: "🇫🇷 Affiche le clasement (Top 3) des membres sur le serveur. \nn🇬🇧 Display the top 3 of users on a server.",
   cooldown: 30,
   usage: '',
   isUserAdmin: false,

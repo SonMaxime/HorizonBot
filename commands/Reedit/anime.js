@@ -20,7 +20,7 @@ module.exports.help = {
   name: "anime",
   aliases: ['anime'],
   category: 'reedit',
-  description: "Envoie un meme depuis les subReedits me_irl, dankmeme et meme.",
+  description: "🇫🇷 Envoie un meme depuis le subReedit animemes. \n🇬🇧 Send a meme from animemes subReedit.",
   cooldown: 10,
   usage: '',
   isUserAdmin: false,

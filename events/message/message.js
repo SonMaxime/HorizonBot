@@ -22,8 +22,8 @@ module.exports = async (client, message, messageReaction) => {
     message.guild.language = require(`./../locales/${language}.json`);
  }
 
-  const expCd = Math.floor(Math.random() * 19) + 1; // 1 - 20
-  const expToAdd = Math.floor(Math.random() * 25) + 10; // 10 - 35
+  const expCd = Math.floor(Math.random() * 19) + 1;
+  const expToAdd = Math.floor(Math.random() * 25) + 10;
 
   if (expCd >= 8 && expCd <= 11) {
     await client.addExp(client, message.member, expToAdd);

@@ -14,7 +14,7 @@ module.exports.help = {
   name: "level",
   aliases: ['level'],
   category: 'xp',
-  description: "Renvoie le niveau de l'utilisateur.",
+  description: "🇫🇷 Renvoie le niveau de l'utilisateur. \n🇬🇧 Display level of a user.",
   cooldown: 10,
   usage: '',
   isUserAdmin: false,

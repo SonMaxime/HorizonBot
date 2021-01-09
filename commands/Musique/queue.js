@@ -96,7 +96,7 @@ function generateQueueEmbed(message, queue) {
 module.exports.help = {
   name: "queue",
   aliases: ['q'],
-  description: "Montre la file d'attente actuelle et le son joué actuellement.",
+  description: "🇫🇷 Montre la file d'attente actuelle et le son joué actuellement. \n🇬🇧 Show the actual queue and the song played.",
   cooldown: 3,
   usage: '',
   isUserAdmin: false,

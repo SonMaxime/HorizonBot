@@ -12,7 +12,7 @@ const GuildSettings = require("../models/guild");
 
 const app = express();
 
-module.exports = async (client) => {
+module.exports = async (client, message) => {
   const dataDir = path.resolve(`${process.cwd()}${path.sep}dashboard`);
   const templateDir = path.resolve(`${dataDir}${path.sep}templates`);
 
@@ -130,6 +130,7 @@ module.exports = async (client) => {
         const member = guild.members.cache.get(req.user.id);
         if (!member) return res.redirect("/dashboard");
         if (!member.permissions.has("MANAGE_GUILD")) return res.redirect("/dashboard");
+
         var storedSettings = await GuildSettings.findOne({ guildID: guild.id });
         if (!storedSettings) {
             const newGuild = {
@@ -145,7 +146,10 @@ module.exports = async (client) => {
         storedSettings.logChannel = req.body.logChannel;
         storedSettings.welcomeMessage = req.body.welcomeMessage;
         storedSettings.welcomeChannel = req.body.welcomeChannel;
+        storedSettings.leaveMessage = req.body.leaveMessage;
         await storedSettings.save().catch(() => {});
+
+        client.db.set(`${message.guild.id}.language`, lang);
 
         renderTemplate(res, req, "settings.ejs", { guild, settings: storedSettings, alert: "Vos paramettres ont été enregistré." });
     });

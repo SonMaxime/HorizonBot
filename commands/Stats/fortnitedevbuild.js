@@ -26,7 +26,7 @@ module.exports.help = {
     name: "fortnitedevbuild",
     aliases: ['ftndevbuild'],
     category: 'stats',
-    description: "Affiche les information au sujet d'une future mise à jour de Fortnite.",
+    description: "🇫🇷 Affiche les information au sujet d'une future mise à jour de Fortnite. \n🇬🇧 Display some infos about a futur update of Fortnite (dev build).",
     cooldown: 10,
     usage: "",
     isUserAdmin: false,

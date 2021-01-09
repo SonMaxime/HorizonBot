@@ -13,7 +13,7 @@ module.exports.help = {
   name: "unmute",
   aliases: ['unmute'],
   category: 'moderation',
-  description: "Unmute un utilisateur.",
+  description: "🇫🇷 Unmute un utilisateur. \n🇬🇧 Unmute a user.",
   cooldown: 10,
   usage: '<@user>',
   isUserAdmin: true,
