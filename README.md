@@ -27,7 +27,7 @@ A French-English Discord.js bot who can play some music, save stats of a server,
 Comment fonctionne Horizon ? C'est simple comme bonjour ! 
 Utilisez la commande .help pour vous y retrouver,vous pouvez même avoir des informations supplémentaires sur une commande en question. Ex. : .help meme 
 
-Déployer le bot sur Heroku : [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/SonMaxime/HorizonBot/tree/main)
+Déployer le bot sur Heroku : [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy?template=https://github.com/SonMaxime/HorizonBot/tree/heroku)
 
 # Avec quoi est conçu ce bot ? 
 Ce bot est conçu avec L'API de Discord, celle de https://fortnitetracker.com/ pour la commande .fortnite (pseudo pc,psn,xb1|store), random-puppy pour la récupération des memes via Reddit et celle de YouTube pour la partie musicale.
