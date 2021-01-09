@@ -3,9 +3,18 @@ const Dashboard = require("./../../dashboard/dashboard");
 module.exports = async (client, message) => {
   console.log(`${client.user.tag} est co`);
 
-  let activities = ['.help', 'pfp by @ikadakat'], i = 0;
-
-  setInterval(() => client.user.setPresence({ activity: { name: `${activities[Math.floor(Math.random() * activities.length)]}`, type: 'PLAYING' }, status: 'dnd' }), 300000); 
+  let status = [
+    {name: '.help', type: 'PLAYING'},
+    {name: 'Twitter: SonMaximeAPX', type: 'WATCHING'},
+    {name: "pfp by @ikadakat", type: "PLAYING"},
+    {name: "Apex Games", type: "COMPETING"}
+  ]
+  function setStatus(){
+    let randomStatus = status[Math.floor(Math.random()*status.length)]
+    client.user.setPresence({activity: randomStatus});
+  }
+  setStatus();
+  setInterval(() => setStatus(), 20000)
 
   for (let guild of client.guilds.cache.array()) {
 
