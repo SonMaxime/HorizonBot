@@ -12,7 +12,7 @@ A French-English Discord.js bot who can play some music, save stats of a server,
 
 [![Discord Bots](https://top.gg/api/widget/720554665812689017.svg)](https://top.gg/bot/720554665812689017)
 [![Build With](https://img.shields.io/npm/v/discord.js.svg?maxAge=3600)](https://www.npmjs.com/package/discord.js)
-[![Dependencies](https://img.shields.io/david/expressjs/express.svg)](https://github.com/SonMaxime/HorizonBot/blob/main/package.json)
+[![Dependencies](https://img.shields.io/david/expressjs/express.svg)](https://github.com/SonMaxime/HorizonBot/blob/v1/package.json)
 [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
 
 # Requis : 
