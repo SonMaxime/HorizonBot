@@ -149,7 +149,7 @@ module.exports = async (client, message) => {
         storedSettings.leaveMessage = req.body.leaveMessage;
         await storedSettings.save().catch(() => {});
 
-        renderTemplate(res, req, "settings.ejs", { guild, settings: storedSettings, alert: "Vos paramettres ont été enregistré." });
+        renderTemplate(res, req, "settings.ejs", { guild, settings: storedSettings, alert: "Vos paramètres ont été enregistré." });
     });
 
   app.listen(config.port, null, null, () => console.log(`Dashboard is up and running on port ${config.port}.`));
