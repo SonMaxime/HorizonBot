@@ -14,7 +14,7 @@ module.exports = async (client, message) => {
     client.user.setPresence({activity: randomStatus});
   }
   setStatus();
-  setInterval(() => setStatus(), 20000)
+  setInterval(() => setStatus(), 300000)
 
   for (let guild of client.guilds.cache.array()) {
 

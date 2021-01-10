@@ -149,8 +149,6 @@ module.exports = async (client, message) => {
         storedSettings.leaveMessage = req.body.leaveMessage;
         await storedSettings.save().catch(() => {});
 
-        client.db.set(`${message.guild.id}.language`, lang);
-
         renderTemplate(res, req, "settings.ejs", { guild, settings: storedSettings, alert: "Vos paramettres ont été enregistré." });
     });
 

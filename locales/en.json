@@ -82,5 +82,13 @@
     "lowMusic": "has set the volume on",
     "augMusic": "has set the volume on",
     "stopMusic": "has stoped the music.",
-    "userLeave": "A user has leaved the guild."
+    "userLeave": "A user has leaved the guild.",
+    "adminDescription": "List of all admin commands.",
+	"funDescription": "List of all fun commands.",
+	"miscDescription": "List of all commands available for everyone",
+	"modDescription": "List of all commands available for moderators.",
+	"musicDescription": "List of all music commands.",
+	"reeditDescription": "List of all memes commands.",
+    "statsDescription": "List of all games stats commands.",
+    "xpDescription": "List of all expreience commands."
 }

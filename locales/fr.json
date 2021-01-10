@@ -84,5 +84,13 @@
 	"lowMusic": "a baissé la musique sur",
 	"augMusic": "a augmenté la musique sur",
 	"stopMusic": "a stopté la musique.",
-	"userLeave": "Un utilisateur(trice) a quitté le serveur."
+	"userLeave": "Un utilisateur(trice) a quitté le serveur.",
+	"adminDescription": "Liste de toutes les comandes destinées aux Admin.",
+	"funDescription": "Liste de toutes les commandes amusantes.",
+	"miscDescription": "Liste des commandes accessible à tous.",
+	"modDescription": "Liste des commandes destinées aux modérateurs.",
+	"musicDescription": "Liste de toutes les commandes musicales.",
+	"reeditDescription": "Liste des commandes meme.",
+	"statsDescription": "Liste des commandes de stats sur un jeu.",
+	"xpDescription": "Liste de toutes les commandes xp."
 }
