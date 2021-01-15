@@ -9,8 +9,8 @@ const guildSchema = mongoose.Schema({
     "type": String,
     "default": defaults.prefix
   },
-  logChannel: {
-    "type": String,
+  logChannelID: {
+    "type": Number,
     "default": defaults.logChannel
   },
   welcomeMessage: {
@@ -21,13 +21,9 @@ const guildSchema = mongoose.Schema({
     "type": String,
     "default": defaults.leaveMessage
   },
-  welcomeChannel: {
-    "type": String,
+  welcomeChannelID: {
+    "type": Number,
     "default": defaults.welcomeChannel
-  },
-  LOCALE: {
-    "type": String,
-    "default": defaults.LOCALE
   }
 });
 

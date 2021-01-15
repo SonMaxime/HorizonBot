@@ -29,7 +29,7 @@
 	"replyPollWithReact": "Répondez au sondage avec une réaction :",
 	"pour": "Pour",
 	"neutre": "Neutre",
-	"conte": "Contre",
+	"contre": "Contre",
 	"nePasHesiterARefaireUnSondage": "N'hésitez pas à refaire d'autres sondages !",
 	"noReason": "Aucune raison provenue.",
 	"userNoExist": "Cet utilisateur n'es pas trouvé ou vous avez peut être fait une erreur.",
@@ -92,5 +92,5 @@
 	"musicDescription": "Liste de toutes les commandes musicales.",
 	"reeditDescription": "Liste des commandes meme.",
 	"statsDescription": "Liste des commandes de stats sur un jeu.",
-	"xpDescription": "Liste de toutes les commandes expérience."
+	"xpDescription": "Liste de toutes les commandes xp."
 }

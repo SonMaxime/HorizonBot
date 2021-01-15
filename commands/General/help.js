@@ -83,7 +83,6 @@ module.exports.run = async (client, message, args, settings) => {
           const botinfocommand = client.commands.get("botinfo")
           const helpcommand = client.commands.get("help")
           const invitecommand = client.commands.get("invite")
-          const pollcommand = client.commands.get("poll")
           const saycommand = client.commands.get("say")
           const generalEmbed = new MessageEmbed()
           .setTitle('General Help')
@@ -92,7 +91,6 @@ module.exports.run = async (client, message, args, settings) => {
             {name: "`botinfo` :", value: `${botinfocommand.help.description}`},
             {name: "`help` : ", value: `${helpcommand.help.description}`},
             {name: "`invite` : ", value: `${invitecommand.help.description}`},
-            {name: "`poll` : ", value: `${pollcommand.help.description}`},
             {name: "`say` : ", value: `${saycommand.help.description}`}
           )
           .setFooter("Dashboard : http://185.44.81.138:1196/")
@@ -180,7 +178,7 @@ module.exports.run = async (client, message, args, settings) => {
           reactionMessage.edit(menuEmbed);
           break;
 
-        case "🏠":
+        case "⚔️":
           reaction.users.remove(user).catch(console.error);
           const addxpcommand = client.commands.get("apex")
           const expcommand = client.commands.get("fortnite")
@@ -241,7 +239,6 @@ module.exports.run = async (client, message, args, settings) => {
       const member = message.guild.member(user);
       switch (reaction.emoji.name) {
         case "⏹":
-          reaction.users.remove(user).catch(console.error);
           collector.stop();
           break;
 

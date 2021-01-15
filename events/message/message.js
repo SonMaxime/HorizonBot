@@ -19,21 +19,21 @@ module.exports = async (client, message, messageReaction) => {
         await db.fetch(`${message.guild.id}.language`) :
         "fr";
     
-    message.guild.language = require(`./../locales/${language}.json`);
+    message.guild.language = require(`../../locales/${language}.json`);
  }
 
   const expCd = Math.floor(Math.random() * 19) + 1;
   const expToAdd = Math.floor(Math.random() * 25) + 10;
 
   if (expCd >= 8 && expCd <= 11) {
-    await client.addExp(client, message.member, expToAdd);
+    await client.addExp(client, message.member, expToAdd).catch(console.error);
   };
 
   const userLevel = Math.floor(0.04 * Math.sqrt(dbUser.experience));
 
   if (dbUser.level < userLevel) {
     message.reply(`bravo à toi, tu viens de monter niveau **${userLevel}** ! Incroyable!`);
-    client.updateUser(message.member, { level: userLevel });
+    client.updateUser(message.member, { level: userLevel }).catch(console.error);
   };
 
   if (!message.content.startsWith(settings.prefix)) return;

@@ -1,9 +1,16 @@
 const { MessageEmbed } = require("discord.js");
 
 module.exports.run = async (client, message, args, settings) => {
-  let user = await client.users.fetch(args[0]);
-  if (!user) return message.reply(message.guild.language.userNoExist);
-  message.guild.members.unban(user);
+  let toBan = await client.users.fetch(args[0])
+
+  if (!message.member.hasPermission("BAN_MEMBERS")) return message.channel.send("You need permissions!") 
+  if (!message.guild.me.hasPermission("BAN_MEMBERS")) return message.channel.send("Bot need permissions!") 
+
+  const reason = args[1] || "no reason";
+
+  message.guild.members.unban(toBan, reason).catch(console.error);
+
+  message.channel.send(`${toBan} unban`)
 };
 
 module.exports.help = {
