@@ -8,7 +8,7 @@
     <img alt="Twitter: SonMaxime667" src="https://img.shields.io/twitter/follow/sonmaxime667.svg?style=social" />
   </a>
 </p>
-Music module inspired by ![EvoBot](https://github.com/eritislami)
+
 [![Build With](https://img.shields.io/npm/v/discord.js.svg?maxAge=3600)](https://www.npmjs.com/package/discord.js)
 [![Dependencies](https://img.shields.io/david/expressjs/express.svg)](https://github.com/SonMaxime/HorizonBot/blob/v1.x/package.json)
 [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
