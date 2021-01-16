@@ -1,5 +1,4 @@
-# HorizonBot
-A French-English Discord.js bot who can play some music, save stats of a server, do fun things, etc..
+![node-soundcloud-downloader](https://socialify.git.ci/SonMaxime/HorizonBot/image?description=1&font=Raleway&forks=1&issues=1&language=1&owner=1&pulls=1&stargazers=1&theme=Dark)
 
 <p>
   <a href="https://github.com/SonMaxime/Midnight.DJS-FR/master/LICENSE" target="_blank">
@@ -10,7 +9,6 @@ A French-English Discord.js bot who can play some music, save stats of a server,
   </a>
 </p>
 
-[![Discord Bots](https://top.gg/api/widget/720554665812689017.svg)](https://top.gg/bot/720554665812689017)
 [![Build With](https://img.shields.io/npm/v/discord.js.svg?maxAge=3600)](https://www.npmjs.com/package/discord.js)
 [![Dependencies](https://img.shields.io/david/expressjs/express.svg)](https://github.com/SonMaxime/HorizonBot/blob/v1.x/package.json)
 [![forthebadge](https://forthebadge.com/images/badges/made-with-javascript.svg)](https://forthebadge.com)
