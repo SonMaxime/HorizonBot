@@ -4,8 +4,8 @@
   <a href="https://github.com/SonMaxime/Midnight.DJS-FR/master/LICENSE" target="_blank">
     <img alt="License: ISC" src="https://img.shields.io/badge/License-ISC-yellow.svg" />
   </a>
-  <a href="https://twitter.com/SonMaximeAPX" target="_blank">
-    <img alt="Twitter: sonmaximeapx" src="https://img.shields.io/twitter/follow/sonmaximeapx.svg?style=social" />
+  <a href="https://twitter.com/SonMaxime667" target="_blank">
+    <img alt="Twitter: SonMaxime667" src="https://img.shields.io/twitter/follow/sonmaxime667.svg?style=social" />
   </a>
 </p>
 
@@ -39,4 +39,4 @@ Lien du dashboard : BIENTÔT EN LIGNE
 En cas de problème que ce soit avec le bot ou le code source merci de me le faire savoir via ces moyens de communication ci dessous :
 
 - Discord : @SonMaxime.#9355
-- Twitter : @sonmaximeapx
+- Twitter : @sonmaxime667
