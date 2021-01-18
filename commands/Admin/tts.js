@@ -1,10 +1,10 @@
 const discordTTS = require('discord-tts');
 
 module.exports.run = async (client, message, args) => {
-    message.delete();
     const argsJoin = args.join(" ");
     const queue = message.client.queue.get(message.guild.id);
     if (queue) {
+        message.delete();
         queue.connection.on("disconnect", () => message.client.queue.delete(message.guild.id).catch(console.error));
     } else {
         const broadcast = client.voice.createBroadcast();
