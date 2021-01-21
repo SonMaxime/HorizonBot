@@ -25,4 +25,5 @@ module.exports.help = {
     isUserAdmin: false,
     permissions: false,
     args: false,
+    inDev: false
 }

@@ -5,11 +5,10 @@ module.exports.run = async (client, message, args, settings) => {
 
   const messages = await message.channel.messages.fetch({
     limit: Math.min(args[0], 100),
-    before: message.id,
   });
 
-  message.delete();
-  await message.channel.bulkDelete(messages).catch(console.error);
+  await message.channel.bulkDelete(messages).catch(console.error)
+  
 };
 
 module.exports.help = {
@@ -21,5 +20,6 @@ module.exports.help = {
   usage: '<nbr_messages> (100 limit + only messages from 14 days ago.)',
   isUserAdmin: false,
   permissions: true,
-  args: true
+  args: true,
+  inDev: false
 }

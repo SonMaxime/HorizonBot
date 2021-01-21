@@ -263,5 +263,6 @@ module.exports.help = {
   usage: '<command_name>',
   isUserAdmin: false,
   permissions: false,
-  args: false
+  args: false,
+  inDev: false
 }

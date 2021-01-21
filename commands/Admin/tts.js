@@ -1,18 +1,18 @@
-const discordTTS = require('discord-tts');
+const discordTTSFR = require('discord-tts-fr');
 
 module.exports.run = async (client, message, args) => {
     const argsJoin = args.join(" ");
     const queue = message.client.queue.get(message.guild.id);
     if (queue) {
         message.delete();
-        return;
+        return message.reply('No possiblo, une musique est cours de lecture.').then(msg => { msg.delete({ timeout: 3000 }) })
     } else {
         message.delete();
         const broadcast = client.voice.createBroadcast();
         var channelId = message.member.voice.channelID;
         var channel = client.channels.cache.get(channelId);
         channel.join().then(connection => {
-            broadcast.play(discordTTS.getVoiceStream(argsJoin));
+            broadcast.play(discordTTSFR.getVoiceStream(argsJoin));
             const dispatcher = connection.play(broadcast);
         });
     }

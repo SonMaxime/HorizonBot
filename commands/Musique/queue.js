@@ -56,6 +56,7 @@ module.exports.run = async (client, message, args, settings) => {
           }
         } else {
           collector.stop();
+          queueEmbed.delete();
           reaction.message.reactions.removeAll();
         }
         await reaction.users.remove(message.author.id);
@@ -101,5 +102,6 @@ module.exports.help = {
   usage: '',
   isUserAdmin: false,
   permissions: false,
-  args: false
+  args: false,
+  inDev: false
 }

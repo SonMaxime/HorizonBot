@@ -5,7 +5,7 @@ module.exports = async (client, message) => {
 
   let status = [
     {name: '.help', type: 'PLAYING'},
-    {name: 'Twitter: SonMaximeAPX', type: 'WATCHING'},
+    {name: 'Twitter: SonMaxime667', type: 'WATCHING'},
     {name: "pfp by @ikadakat", type: "PLAYING"},
     {name: "Apex Games", type: "COMPETING"}
   ]

@@ -60,5 +60,6 @@ module.exports.help = {
     usage: "<pseudo [pc,xb1,psn]>",
     isUserAdmin: false,
     permissions: false,
-    args: false
+    args: false,
+    inDev: false
 }

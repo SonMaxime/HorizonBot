@@ -1,4 +1,5 @@
 const { Collection } = require('discord.js');
+const { devs } = require("../../devs.json");
 
 module.exports = async (client, message, messageReaction) => {
   const settings = await client.getGuild(message.guild);
@@ -44,6 +45,12 @@ module.exports = async (client, message, messageReaction) => {
 
   const command = client.commands.get(commandName) || client.commands.find(cmd => cmd.help.aliases && cmd.help.aliases.includes(commandName));
   if (!command) return;
+
+  if (command.help.inDev && !devs.includes(message.author.id)) {
+    message.channel.send('This command is in dev/maintenance. Please try later or wait for patchnotes.').then(msg => { msg.delete({ timeout: 1500 })}).catch(console.error);
+  } else {
+    return;
+  }
 
   if (command.help.permissions && !message.member.hasPermission('BAN_MEMBERS')) return message.reply(message.guild.language.noPermToUse);
 

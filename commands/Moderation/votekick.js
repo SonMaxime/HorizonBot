@@ -62,5 +62,6 @@ module.exports.help = {
   usage: '@user',
   isUserAdmin: false,
   permissions: true,
-  args: true
+  args: true,
+  inDev: false
 }
