@@ -4,8 +4,8 @@
   <a href="https://github.com/SonMaxime/Midnight.DJS-FR/master/LICENSE" target="_blank">
     <img alt="License: ISC" src="https://img.shields.io/badge/License-ISC-yellow.svg" />
   </a>
-  <a href="https://twitter.com/SonMaxime667" target="_blank">
-    <img alt="Twitter: SonMaxime667" src="https://img.shields.io/twitter/follow/sonmaxime667.svg?style=social" />
+  <a href="https://twitter.com/SonMaxWasTaken" target="_blank">
+    <img alt="Twitter: SonMaxWasTaken" src="https://img.shields.io/twitter/follow/sonmaxwastaken.svg?style=social" />
   </a>
 </p>
 
