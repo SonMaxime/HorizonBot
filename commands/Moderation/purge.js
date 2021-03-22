@@ -1,15 +1,42 @@
-const { MessageEmbed } = require("discord.js");
-
 module.exports.run = async (client, message, args, settings) => {
-  if (isNaN(args[0]) || (args[0] < 1 || args[0] > 100)) return message.reply(message.guild.language.specifyNumberBetweenOneAnd100);
+        if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.reply(message.guild.language.noPermToUse);
 
-  const messages = await message.channel.messages.fetch({
-    limit: Math.min(args[0], 100),
-  });
+        const amount = parseInt(args[0]) + 1;
+        const exRes = new MessageEmbed()
+        .setColor("00FF00")
+        .setTitle("Purge command")
+        if (isNaN(amount)) {
+                return message.reply(exRes);
+        } else if (amount <= 1 || amount > 100) {
+          return message.reply(message.guild.language.specifyNumberBetweenOneAnd100);
+        }
 
-  await message.channel.bulkDelete(messages).catch(console.error)
-  
-};
+        (async () => {
+                try {
+                        message.channel
+                                .bulkDelete(amount, true)
+                                .catch((err) => {
+                                      console.error(err);
+                                         message.channel.send(
+                                                `:warning: ${message.guild.language.discordLimitations}`
+                                         );
+                                 });
+                          message.reply(
+                                  `🗑️ I've deleted \`${
+                                          amount - 1
+                                  }\`  messages for you`
+                          )
+                                  .then((msg) => {
+                                          msg.delete({
+                                                  timeout: 5000,
+                                          }).catch(console.error);
+                                  })
+                                  .catch(console.error);
+                  } catch (err) {
+                          console.log(err);
+                  }
+          })();
+},
 
 module.exports.help = {
   name: "purge",
@@ -21,5 +48,5 @@ module.exports.help = {
   isUserAdmin: false,
   permissions: true,
   args: true,
-  inDev: false
+  inDev: true
 }

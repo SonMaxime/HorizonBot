@@ -1,7 +1,9 @@
-module.exports.run = async (client, message, args, settings) => {
-  if (message.author.id !== "492402867953467392") return;
-  await message.delete();
-  await message.channel.send(message.guild.language.restartBot);
+const config = require('./../../config');
+
+module.exports.run = async (client, message) => {
+  if (message.author.id !== "492402867953467392") return message.delete();
+  let bot = message.client;
+  message.channel.send(`Rédémarage de \`${message.client.user.tag}\` en cours....`).then(() => bot.destroy()).then(() => bot.login(config.token)).then(() => message.channel.send(`Le bot a redémarré avec succès.`));
   process.exit();
 };
 

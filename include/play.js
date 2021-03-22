@@ -78,7 +78,13 @@ module.exports = {
       const playingEmbed = new MessageEmbed()
       .setTitle(`🎶 ${message.guild.language.playingNow} : **${song.title}**`)
       .setURL(song.url)
-      .setImage(`https://img.youtube.com/vi/` + `${song.id}` + `/0.jpg`)
+
+      if (song.url.includes("soundcloud.com")) {
+        playingEmbed.setImage(``)
+      } else if (song.url.includes("youtube.com")) {
+        playingEmbed.setImage(`https://img.youtube.com/vi/` + `${song.id}` + `/0.jpg`)
+      }
+      
       var playingMessage = await queue.textChannel.send(playingEmbed);
       await playingMessage.react("⏭");
       await playingMessage.react("⏯");

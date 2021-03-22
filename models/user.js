@@ -1,5 +1,4 @@
 const mongoose = require("mongoose");
-const { DEFAULTSETTINGS: defaults } = require("../config");
 
 const userSchema = mongoose.Schema({
   _id: mongoose.Schema.Types.ObjectId,

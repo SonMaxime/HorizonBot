@@ -8,4 +8,13 @@ module.exports = async (client, message) => {
     userID: message.user.id,
     username: message.user.tag,
   });
+
+  const channel = member.guild.channels.cache.find(
+    (ch) => ch.name === GuildSettings.welcomeChannel
+  );
+
+  const embed = new MessageEmbed()
+  .setTitle("test")
+
+  channel.send(embed);
 }

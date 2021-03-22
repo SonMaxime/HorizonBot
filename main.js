@@ -7,7 +7,7 @@ require("./util/functions")(client);
 client.config = require("./config");
 client.commands = new Collection();
 client.queue = new Map();
-client.db = new Database("database/main");
+client.db = new Database("database/languageGuild.json");
 client.mongoose = require("./util/mongoose");
 ["commands", "cooldowns"].forEach(x => client[x] = new Collection());
 

@@ -92,5 +92,6 @@
 	"musicDescription": "Liste de toutes les commandes musicales.",
 	"reeditDescription": "Liste des commandes meme.",
 	"statsDescription": "Liste des commandes de stats sur un jeu.",
-	"xpDescription": "Liste de toutes les commandes xp."
+	"xpDescription": "Liste de toutes les commandes xp.",
+	"discordLimitations": "Due aux réglementations de Discord, je ne peux supprimer des messages qu'à ceux dattés d'avant 14 jours."
 }

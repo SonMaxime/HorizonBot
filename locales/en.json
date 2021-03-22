@@ -90,5 +90,6 @@
 	"musicDescription": "List of all music commands.",
 	"reeditDescription": "List of all memes commands.",
     "statsDescription": "List of all games stats commands.",
-    "xpDescription": "List of all expreience commands."
+    "xpDescription": "List of all expreience commands.",
+    "discordLimitations": "Due to Discord rules, i can't delete messages who's aged 14 days ago."
 }

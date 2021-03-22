@@ -1,64 +1,57 @@
-const { MessageEmbed } = require('discord.js')
-const warningModel = require('../../models/warning')
+const Warn = require('../../models/warn');
 
-module.exports.run = async (client, message, args, settings) => {
-    const target = message.mentions.members.first() || message.guild.members.cache.get(args[0])
-    if (!target) return message.channel.send(
-        client.embedError(message, "Please mention a user. Use `[prefix]help warn` for more information on how to use this command.")
-    )
+module.exports.run = async (message, args) => {
+    const member = message.mentions.members.first() || message.guild.members.cache.get(args[0]);
 
-    if (target.id === message.author.id) return message.reply("You cannot warn yourself.")
+    if (member.user.bot) return message.delete();
 
-    if (target.user.bot) return message.reply("You cannot warn bots.")
+    if (member.id === message.author.id) return message.delete();
 
-    if (target.hasPermission('MANAGE_MESSAGES')) {
-        return message.channel.send("You cannot warn a moderation/administrator.");
+    const memberPosition = member.roles.highest.position;
+    const moderationPosition = message.member.roles.highest.position;
+
+    if (message.member.ownerID !== message.author.id && !(moderationPosition > memberPosition)) {
+        return message.channel.send(`Vous ne pouvez pas avertir une personne plus haute que vous dans la hiérachie !`)
     }
-    
-    let reason = args.slice(1).join(' ')
-    if (!reason) reason = "Not specified"
 
-    const loadingMessage = await message.channel.send(
-        new MessageEmbed()
-        .setAuthor(message.author.username, message.author.displayAvatarURL())
-        .setDescription(`Warning ${target}... Please wait!`)
-    )
-    const cases = await guildCasesModel.findOneAndUpdate({
-        guildId: message.guild.id,
-    }, {
-        $inc: {
-            totalCases: 1,
-            warnCases: 1
-        }
-    }, {
-        upsert: true,
-        new: true,
-    })
-    await new warningModel({
-        guildId: message.guild.id,
-        userId: target.id,
-        moderatorId: message.author.id,
-        timestamp: new Date().getTime(),
-        reason,
-    }).save()
+    const reason = args.slice(1).join(" ");
+    if (!reason) {
+        return message.channel.send(`Veuillez indiquer une raison !`)
+    }
 
-    target.send(
-        new MessageEmbed()
-        .setAuthor(target.user.username, target.user.displayAvatarURL())
-        .setTitle(`You have been warned in ${message.guild.name}`)
-        .addField('Moderator', message.author.tag, false)
-        .addField('Reason', reason, false)
-        .setColor('YELLOW')
-        .setFooter(`Sent from ${message.guild.name}`, message.guild.iconURL())
-    ).catch(e => message.channel.send(`Warning logged for ${target}... I could not message them.`))
+    let warndb = await Warn.find({ serverID: message.guild.id, userID: member.id })
+    if (warndb) {
+        const newWarn = new Warn({
+            serverID: `${message.guild.id}`,
+            userID: `${member.id}`,
+            reason: `${reason}`,
+            date: new Date,
+            moderator: `${message.author.id}`
+        }).save().then(async() => {
+            member.send(`Bonjour ${member.user.tag}, Vous avez été avertit sur ${message.guild.name} pour la raison ${reason}.`).catch(() => {
+                return message.channel.send(`Je n'ai pas pus MP ${member.user.tag} mais le warn a bien été enregistré. `)
+            });
 
-    loadingMessage.edit(
-        new MessageEmbed()
-        .setTitle(`Case Number #${cases.totalCases} | Warn`)
-        .setDescription(`Successfully warned ${target}`)
-        .setColor('#F1C40F')
-    )
-};
+            message.channel.send(`J'ai bien avertit ${member.user.tag} en MP . Il a désormais ${warndb.length || '1'} warn(s)`)
+        });
+
+    } else {
+        const newWarn = new Warn({
+            serverID: `${message.guild.id}`,
+            userID: `${member.id}`,
+            reason: `${reason}`,
+            date: Date.now(),
+            moderator: `${message.author.id}`
+        }).save().then(() => {
+            member.send(`Bonjour ${member.user.tag}, Vous avez été avertit sur ${message.guild.name} pour la raison ${reason}.`).catch(() => {
+            return message.channel.send(`Je n'ai pas pus MP ${member.user.tag} mais le warn a bien été enregistré. `)
+        });
+        message.channel.send(`J'ai bien avertit ${member.user.tag} en MP . C'est son premier warn`)
+    });
+
+
+    }
+},
 
 module.exports.help = {
   name: "warn",
