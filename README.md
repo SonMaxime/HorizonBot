@@ -39,5 +39,4 @@ Lien du dashboard : BIENTÔT EN LIGNE
 # Contact :
 En cas de problème que ce soit avec le bot ou le code source merci de me le faire savoir via ces moyens de communication ci dessous :
 
-- Discord : @S o n M a x i m e.#9355
-- Twitter : @SonMaxWasTaken
+- Discord : const dev = require('SonMaxime')#9355
