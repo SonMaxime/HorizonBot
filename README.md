@@ -1,3 +1,5 @@
+DEPRECATED BOT !!!!!!
+
 ![node-soundcloud-downloader](https://socialify.git.ci/SonMaxime/HorizonBot/image?description=1&font=Raleway&forks=1&issues=1&language=1&owner=1&pulls=1&stargazers=1&theme=Dark)
 
 <p>
